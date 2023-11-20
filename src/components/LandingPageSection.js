@@ -24,7 +24,7 @@ const LandingPageSection = () => {
                      }}
                 >
                     <div className='row'>
-                        <div className='col-sm-2'></div>
+                        <div className='col-sm'></div>
                         {/* the text section */}
                         <div className='col-sm-4 text-center text-sm-start mb-4'>
                             <h1 className=' fw-bolder '>
@@ -59,7 +59,7 @@ const LandingPageSection = () => {
                                 width="250px"   
                             />
                         </div>
-                        <div className='col-sm-2'></div>
+                        <div className='col-sm'></div>
                     </div>
 
                 </div>
