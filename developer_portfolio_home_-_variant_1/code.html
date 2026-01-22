@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Njoh Bless Nde | Software Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#0a0a0a", // Deepened for agency feel
+                        "card-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(19, 127, 236, 0.15) 0%, rgba(19, 127, 236, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #283039;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(10, 10, 10, 0.8);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-nav border-b border-white/5 px-6 lg:px-40 py-4">
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-1.5 rounded-lg">
+                    <span class="material-symbols-outlined text-white text-2xl" data-icon="terminal">terminal</span>
+                </div>
+                <h2 class="text-xl font-bold tracking-tight">NjohBless<span class="text-primary">.</span></h2>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">Projects</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#experience">Experience</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#tech">Tech Stack</a>
+                <a class="px-5 py-2.5 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 transition-all"
+                    href="#contact">Hire Me</a>
+            </div>
+            <button class="md:hidden">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+    <main class="relative">
+        <!-- Hero Section -->
+        <section class="px-6 lg:px-40 py-20 lg:py-32 overflow-hidden relative">
+            <div class="glow-effect -top-20 -left-20"></div>
+            <div class="glow-effect bottom-20 right-0"></div>
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="z-10 order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        <span class="text-xs font-bold text-primary uppercase tracking-widest">Available for new
+                            projects</span>
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-8">
+                        Engineering with <span class="text-primary">AI-Augmented</span> Precision
+                    </h1>
+                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-lg mb-10 leading-relaxed">
+                        I am Njoh Bless Nde, a Software Developer leveraging AI workflows to build scalable applications
+                        with Next.js, FastAPI, and Supabase. Focused on delivering code-driven solutions to real-world
+                        problems.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects"
+                            class="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:translate-y-[-2px] transition-all shadow-lg shadow-primary/20 text-center">
+                            View My Work
+                        </a>
+                        <a href="../NJOH%20BLESS%20NDe.pdf" download
+                            class="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all text-center">
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="relative order-1 lg:order-2">
+                    <div class="relative z-10 w-full aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-card-dark"
+                        data-alt="Abstract 3D tech graphic with neon blue glowing lines"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVdjsUwzME2TZGrVjkOFJgJ-jC9KPineWDoAdMwlmnDCYNV8A8-nadOVmvKYjRWosXZtaEXeu5-dzpcMLXtJH7YCUecO1K6M2qzGIuDjWPUbdLILVYRbk_0hSfoEuGSRgFS_RZKkM-B6Of7UkdCnJGWmknWrhAi5IQq-vkw748NItsdYk3r6erNOrH8dz2DVtbMkbLparSsEr9ZKn5bKsZ3cXQ_PrM12FuIZbpyHUNrw-D2J2G3uimBAIVfE4bFJOGPG4dP0cG_uY'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/20 blur-3xl rounded-full"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Tech Stack Marquee -->
+        <section class="border-y border-white/5 py-12 bg-white/[0.02]" id="tech">
+            <div class="max-w-[1200px] mx-auto px-6 overflow-hidden">
+                <div
+                    class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-3xl">terminal</span>
+                        <span class="font-bold">Next.js</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-3xl">database</span>
+                        <span class="font-bold">Supabase</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-3xl">bolt</span>
+                        <span class="font-bold">FastAPI</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-3xl">token</span>
+                        <span class="font-bold">TypeScript</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-3xl">psychology</span>
+                        <span class="font-bold">LLM RAG</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Selected Works -->
+        <section class="px-6 lg:px-40 py-24" id="projects">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+                    <div>
+                        <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4">Portfolio</h2>
+                        <h3 class="text-4xl font-bold">Selected Works</h3>
+                    </div>
+                    <p class="text-slate-500 max-w-sm">A collection of projects that define my commitment to quality and
+                        technical excellence.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group cursor-pointer">
+                        <div class="relative aspect-video rounded-2xl overflow-hidden mb-6 border border-white/5"
+                            data-alt="StarterPay middleware interface"
+                            style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                            <div
+                                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                                <a href="https://starter-pay.vercel.app/" target="_blank"
+                                    class="px-6 py-3 bg-white text-black font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                                    Project</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">StarterPay
+                                    - API Middleware</h4>
+                                <div class="flex gap-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">Next.js</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">REST
+                                        APIs</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">Node</span>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-slate-600 group-hover:text-primary">arrow_outward</span>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="group cursor-pointer">
+                        <div class="relative aspect-video rounded-2xl overflow-hidden mb-6 border border-white/5"
+                            data-alt="Guided Tutor AI app interface"
+                            style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                            <div
+                                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                                <a href="https://guided-tutor.vercel.app/" target="_blank"
+                                    class="px-6 py-3 bg-white text-black font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                                    Project</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Guided
+                                    Tutor - AI Web App</h4>
+                                <div class="flex gap-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">Next.js</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">Supabase</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">LLM
+                                        RAG</span>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-slate-600 group-hover:text-primary">arrow_outward</span>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="group cursor-pointer">
+                        <div class="relative aspect-video rounded-2xl overflow-hidden mb-6 border border-white/5"
+                            data-alt="INIESAT Web Platform"
+                            style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                            <div
+                                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                                <a href="https://iniesat.org/" target="_blank"
+                                    class="px-6 py-3 bg-white text-black font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                                    Project</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">INIESAT
+                                    Web Platform</h4>
+                                <div class="flex gap-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">Next.js</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">Supabase</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">PostgreSQL</span>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-slate-600 group-hover:text-primary">arrow_outward</span>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="group cursor-pointer">
+                        <div class="relative aspect-video rounded-2xl overflow-hidden mb-6 border border-white/5"
+                            data-alt="TECHNOFIX UI Components"
+                            style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                            <div
+                                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                                <a href="https://digitalnexus-pg9f9wpj4-mchism12-6852s-projects.vercel.app"
+                                    target="_blank"
+                                    class="px-6 py-3 bg-white text-black font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                                    Project</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                                    DIGITAL NEXUS
+                                </h4>
+                                <div class="flex gap-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">Tailwind
+                                        CSS</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">JavaScript</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded-md text-slate-400">Agile</span>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-slate-600 group-hover:text-primary">arrow_outward</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience -->
+        <section class="px-6 lg:px-40 py-24 bg-white/[0.02] border-y border-white/5" id="experience">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="flex flex-col lg:grid lg:grid-cols-2 gap-20">
+                    <div>
+                        <div class="mb-16">
+                            <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4">The Journey</h2>
+                            <h3 class="text-4xl font-bold">Experience</h3>
+                        </div>
+                        <div class="relative space-y-12 timeline-line pl-10">
+                            <!-- Item 1 -->
+                            <div class="relative">
+                                <div
+                                    class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background-dark shadow-[0_0_15px_rgba(19,127,236,0.6)]">
+                                </div>
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                                    <h4 class="text-xl font-bold">Software Developer</h4>
+                                    <span
+                                        class="text-sm font-bold text-slate-500 bg-white/5 px-3 py-1 rounded-full border border-white/10">2024
+                                        — Present</span>
+                                </div>
+                                <p class="text-primary font-medium mb-4">INIESAT</p>
+                                <ul class="text-slate-400 space-y-2 max-w-2xl leading-relaxed">
+                                    <li class="flex gap-3"><span class="text-primary">•</span> Engineered official web
+                                        platform using Next.js & Supabase.</li>
+                                    <li class="flex gap-3"><span class="text-primary">•</span> Implemented secure auth
+                                        and PostgreSQL backend.</li>
+                                </ul>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="relative">
+                                <div
+                                    class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-[#283039] border-4 border-background-dark">
+                                </div>
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                                    <h4 class="text-xl font-bold">Software Engineering Intern</h4>
+                                    <span
+                                        class="text-sm font-bold text-slate-500 bg-white/5 px-3 py-1 rounded-full border border-white/10">2023</span>
+                                </div>
+                                <p class="text-primary font-medium mb-4">TECHNOFIX</p>
+                                <ul class="text-slate-400 space-y-2 max-w-2xl leading-relaxed">
+                                    <li class="flex gap-3"><span class="text-primary">•</span> Developed high-fidelity
+                                        UI with Tailwind CSS.</li>
+                                    <li class="flex gap-3"><span class="text-primary">•</span> Utilized Git/GitHub in an
+                                        Agile environment.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-16">
+                            <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4">Learning</h2>
+                            <h3 class="text-4xl font-bold">Education</h3>
+                        </div>
+                        <div class="relative space-y-12 timeline-line pl-10 border-l border-white/5">
+                            <!-- Education 1 -->
+                            <div class="relative">
+                                <div
+                                    class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background-dark shadow-[0_0_15px_rgba(19,127,236,0.6)]">
+                                </div>
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                                    <h4 class="text-xl font-bold">BTech in Software Engineering</h4>
+                                    <span
+                                        class="text-sm font-bold text-slate-500 bg-white/5 px-3 py-1 rounded-full border border-white/10">Expected
+                                        2025</span>
+                                </div>
+                                <p class="text-primary font-medium mb-2">INIESAT</p>
+                                <p class="text-slate-400 text-sm italic">Focusing on advanced software design and
+                                    enterprise systems.</p>
+                            </div>
+                            <!-- Education 2 -->
+                            <div class="relative">
+                                <div
+                                    class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-[#283039] border-4 border-background-dark">
+                                </div>
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                                    <h4 class="text-xl font-bold">HND in Software Engineering</h4>
+                                    <span
+                                        class="text-sm font-bold text-slate-500 bg-white/5 px-3 py-1 rounded-full border border-white/10">2024</span>
+                                </div>
+                                <p class="text-primary font-medium mb-2">INIESAT</p>
+                                <p class="text-slate-400 text-sm italic">Core foundations in algorithms, data
+                                    structures, and web technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="px-6 lg:px-40 py-32 relative overflow-hidden" id="contact">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full pointer-events-none">
+            </div>
+            <div class="max-w-[1200px] mx-auto text-center relative z-10">
+                <h2 class="text-4xl lg:text-6xl font-black mb-8 leading-tight">Ready to bring your next <br /><span
+                        class="text-primary">big idea to life?</span></h2>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12">
+                    I'm currently available for freelance work and full-time opportunities. Let's build something
+                    extraordinary together.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <div class="flex flex-col gap-2 items-center sm:items-start text-slate-400 text-sm mb-4 sm:mb-0">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            Yaoundé, Cameroon
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">call</span>
+                            +237 677 653 097
+                        </div>
+                    </div>
+                    <a href="mailto:blessnde184@gmail.com"
+                        class="w-full sm:w-auto px-10 py-5 bg-primary text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">mail</span>
+                        Email Me
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="px-6 lg:px-40 py-12 border-t border-white/5">
+            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary/20 p-1 rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-xl"
+                            data-icon="terminal">terminal</span>
+                    </div>
+                    <span class="font-bold text-lg">NjohBless<span class="text-primary">.</span></span>
+                </div>
+                <p class="text-sm text-slate-500">© 2024 Njoh Bless Nde. Built with passion &amp; precision.</p>
+                <div class="flex items-center gap-6">
+                    <a class="text-slate-500 hover:text-white transition-colors" href="https://github.com/blessnde"
+                        target="_blank">GitHub</a>
+                    <a class="text-slate-500 hover:text-white transition-colors"
+                        href="https://linkedin.com/in/njoh-bless-a7b31021a" target="_blank">LinkedIn</a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
