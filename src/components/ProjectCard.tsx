@@ -120,7 +120,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <div className="text-[11px] font-mono uppercase tracking-wider text-amber-400/90">
                 Project Brief & Business Objective:
               </div>
-              <p className="mt-2 text-xs font-normal leading-relaxed text-zinc-300 sm:text-sm">
+              <p className="mt-2 text-xs font-normal leading-relaxed text-zinc-400 sm:text-sm">
                 {project.projectBrief}
               </p>
             </div>
@@ -132,11 +132,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">
                 Execution & Workflow Architecture:
               </div>
-              <ul className="mt-3 space-y-2 text-xs font-normal text-zinc-300 sm:text-sm">
+              <ul className="mt-3 space-y-2 text-xs font-normal text-zinc-400 sm:text-sm">
                 {project.workflowHighlights.map((step, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-400" />
-                    <span className="leading-relaxed">{step}</span>
+                    <span className="leading-relaxed font-normal text-zinc-400">{step}</span>
                   </li>
                 ))}
               </ul>
