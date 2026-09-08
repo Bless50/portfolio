@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+/* ============ DESIGN TOKENS & SYSTEM VARIABLES ============ */
+:root {
+  --font-sans: "Geist", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", var(--font-geist-mono), ui-monospace, monospace;
+
+  --background: #0b0c0e;
+  --foreground: #f3f4f6;
+  --surface: #121418;
+  --surface-hover: #17191f;
+  --surface-active: #1c1f26;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.16);
+  --accent: #22c55e;
+  --accent-muted: rgba(34, 197, 94, 0.12);
+  --muted-text: #9ca3af;
+  --faint-text: #6b7280;
+
+  /* Emil Kowalski custom easings */
+  --ease-ui: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@theme {
+  --font-sans: "Geist", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", var(--font-geist-mono), monospace;
+}
+
+/* ============ BASE RESETS ============ */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background-color: var(--background);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle, refined selection */
+::selection {
+  background: rgba(34, 197, 94, 0.2);
+  color: #ffffff;
+}
+
+/* ============ TACTILE MICRO-INTERACTION UTILITIES ============ */
+.tactile-btn {
+  transition: transform 140ms var(--ease-ui), background-color 140ms ease, border-color 140ms ease;
+}
+
+.tactile-btn:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .interactive-card {
+    transition: transform 180ms var(--ease-ui), border-color 180ms ease, box-shadow 180ms ease;
+  }
+  .interactive-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-hover);
+    box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Refined focus ring */
+*:focus-visible {
+  outline: 1.5px solid rgba(255, 255, 255, 0.35);
+  outline-offset: 2px;
+}

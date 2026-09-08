@@ -1,0 +1,58 @@
+# ============ DEPENDENCIES ============
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ============ NEXT.JS & BUILD OUTPUTS ============
+/.next/
+/out/
+/build
+/dist
+*.tsbuildinfo
+next-env.d.ts
+
+# ============ ENVIRONMENT & SECRETS ============
+.env
+.env*.local
+.env.development
+.env.test
+.env.production
+*.pem
+
+# ============ TESTING & TOOL ARTIFACTS ============
+/coverage
+/.playwright-mcp/
+/.agents/
+
+# ============ LOGS & DEBUG ============
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+pnpm-debug.log*
+
+# ============ IDE & EDITORS ============
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# ============ OPERATING SYSTEM ============
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============ VERCEL ============
+.vercel
+.pdf
+.md 
