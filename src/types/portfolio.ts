@@ -1,6 +1,7 @@
 // ============ TYPES & INTERFACES ============
 
-export interface QuadPillarCaseStudy {
+// ============ PROJECT DETAIL DATA ============
+export interface CaseStudy {
   problem: string;
   solution: string;
   impact: string;
@@ -16,40 +17,25 @@ export interface Project {
   track: ProjectTrack;
   category: string;
   year: string;
-  featured: boolean;
+  thumbnail: string;
   tags: string[];
-  metrics: string[];
-  // Developer track details
-  caseStudy?: QuadPillarCaseStudy;
   liveUrl?: string;
   githubUrl?: string;
-  // VA / Automation track details
+  // Developer track detail
+  caseStudy?: CaseStudy;
+  // VA track detail
   projectBrief?: string;
-  videoUrl?: string; // Loom, YouTube, or direct MP4 walkthrough
-  toolsUsed?: string[];
   workflowHighlights?: string[];
+  toolsUsed?: string[];
+  videoUrl?: string;
 }
 
+// ============ EXPERIENCE & EDUCATION ============
 export interface ExperienceItem {
   period: string;
   role: string;
   company: string;
   location: string;
-  highlights: string[];
-  stack: string[];
-}
-
-export interface SkillCategory {
-  title: string;
-  description: string;
-  skills: string[];
-}
-
-export interface Certification {
-  name: string;
-  issuer: string;
-  year: string;
-  badge?: string;
 }
 
 export interface Education {

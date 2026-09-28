@@ -1,36 +1,36 @@
 @import "tailwindcss";
 
-/* ============ DESIGN TOKENS & SYSTEM VARIABLES ============ */
+/* ============ DESIGN TOKENS — WARM MINIMALIST LIGHT ============ */
 :root {
-  --font-sans: "Geist", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Geist", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "Geist Mono", var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
 
-  --background: #0b0c0e;
-  --foreground: #f3f4f6;
-  --surface: #121418;
-  --surface-hover: #17191f;
-  --surface-active: #1c1f26;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.16);
-  --accent: #22c55e;
-  --accent-muted: rgba(34, 197, 94, 0.12);
-  --muted-text: #9ca3af;
-  --faint-text: #6b7280;
+  --background: #FAFAF8;
+  --foreground: #1a1a1a;
+  --surface: #FFFFFF;
+  --border: #EAEAEA;
+  --border-hover: #D4D4D4;
+  --text-primary: #1a1a1a;
+  --text-secondary: #737373;
+  --text-tertiary: #a3a3a3;
+  --accent: #1a1a1a;
 
-  /* Emil Kowalski custom easings */
+  /* Subtle easings */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-ui: cubic-bezier(0.23, 1, 0.32, 1);
-  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @theme {
-  --font-sans: "Geist", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Geist", var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "Geist Mono", var(--font-geist-mono), monospace;
+  --font-display: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
 }
 
 /* ============ BASE RESETS ============ */
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
   background-color: var(--background);
 }
 
@@ -43,36 +43,97 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
-/* Subtle, refined selection */
+/* Warm, subtle selection */
 ::selection {
-  background: rgba(34, 197, 94, 0.2);
-  color: #ffffff;
+  background: rgba(26, 26, 26, 0.08);
+  color: #1a1a1a;
 }
 
-/* ============ TACTILE MICRO-INTERACTION UTILITIES ============ */
+/* ============ SCROLL-ENTRY & REVEAL ANIMATIONS ============ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-entry {
+  animation: fadeUp 0.7s var(--ease-out) both;
+}
+
+.animate-entry-d1 { animation-delay: 80ms; }
+.animate-entry-d2 { animation-delay: 160ms; }
+.animate-entry-d3 { animation-delay: 240ms; }
+.animate-entry-d4 { animation-delay: 320ms; }
+.animate-entry-d5 { animation-delay: 400ms; }
+.animate-entry-d6 { animation-delay: 480ms; }
+.animate-entry-d7 { animation-delay: 560ms; }
+.animate-entry-d8 { animation-delay: 640ms; }
+
+/* Scroll-driven reveals */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-entry {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .reveal-on-scroll {
+    transform: none !important;
+    transition: opacity 0.25s ease !important;
+  }
+}
+
+/* ============ BUTTON INTERACTIONS ============ */
 .tactile-btn {
-  transition: transform 140ms var(--ease-ui), background-color 140ms ease, border-color 140ms ease;
+  transition: transform 140ms var(--ease-ui), background-color 200ms ease, border-color 200ms ease, color 200ms ease;
 }
 
 .tactile-btn:active {
   transform: scale(0.97);
 }
 
+/* ============ CARD HOVER ============ */
 @media (hover: hover) and (pointer: fine) {
-  .interactive-card {
-    transition: transform 180ms var(--ease-ui), border-color 180ms ease, box-shadow 180ms ease;
+  .project-card {
+    transition: box-shadow 300ms ease, transform 300ms var(--ease-ui);
   }
-  .interactive-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--border-hover);
-    box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.5);
+
+  .project-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
   }
+
+  .project-card:hover .project-image {
+    transform: scale(1.03);
+  }
+}
+
+/* ============ PROJECT IMAGE TRANSITION ============ */
+.project-image {
+  transition: transform 500ms var(--ease-out);
 }
 
 /* Refined focus ring */
 *:focus-visible {
-  outline: 1.5px solid rgba(255, 255, 255, 0.35);
+  outline: 1.5px solid rgba(0, 0, 0, 0.2);
   outline-offset: 2px;
 }
